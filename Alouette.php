@@ -7,6 +7,12 @@ class Alouette {
 	 * @return string
 	 */
 
+	static public function titre($oiseau, $qualite){
+		$resultat ='';
+		$resultat .=$oiseau.', '.$qualite.' '.$oiseau;
+		return $resultat;
+	}
+
 
 	/** Méthode chanson
 	 * Retourne la chanson au complet dans un div.chanson
@@ -64,7 +70,10 @@ class Alouette {
 	 * @return string
 	 * @note L'appel est dans un div.appel et la réponse, dans un div.reponse
 	 */
-
+	static public function appelReponse(){
+		$resultat='';
+		return $resultat;
+	}
 
 	/** Méthode enumMembres
 	 * Génère l'énumération des membres passée en paramètre.
@@ -82,5 +91,11 @@ class Alouette {
 	 * @return string
 	 */
 
+	static public function actionMembre($action='te plumerai', $membre='la tête'){
+		$resultat ='';
+		$resultat .='<div class="appel">Je '.$action.' '.$membre.'</div>';
+		$resultat .='<div class="reponse">Je '.$action.' '.$membre.'</div>';
+		return $resultat;
+	 }
 
 }

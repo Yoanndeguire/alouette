@@ -1,16 +1,21 @@
+<?php
+include('../donnees.inc.php');
+include('../Alouette.php');
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="css/alouette.css" />
-	<title>Alouette, gentille Alouette</title>
+	<title><?php echo ALouette::titre('Corbeaux','tanant de');?></title>
 </head>
 
 <body>
 	<div id="app">
-		<header>Ma ritournelle</header>
-		<footer>Intégration Web 3</footer>
+		<?php include('../header.inc.php');?>
+		<?php include('../footer.inc.php');?>
 		<nav>
 			<ul>
 				<li><a href="index.php">Alouette</a></li>
@@ -21,7 +26,7 @@
 			</ul>
 		</nav>
 		<div class="body">
-			<h1>Alouette, gentille Alouette</h1>
+			<h1><?php echo ALouette::titre('Corbeaux','tanant de');?></h1>
 			<div class="chanson">
 				<div class="strophe">
 					<div class="refrain">
@@ -34,8 +39,7 @@
 							<div>Alouette, je te plumerai.</div>
 						</div>
 					</div>
-					<div class="appel">Je te plumerai la tête</div>
-					<div class="reponse">Je te plumerai la tête</div>
+					<?php echo Alouette::actionMembre('mangerai', 'le gros orteil'); ?>
 					<div class="appel">Et la tête</div>
 					<div class="reponse">Et la tête</div>
 					<div class="appel">Alouette</div>
